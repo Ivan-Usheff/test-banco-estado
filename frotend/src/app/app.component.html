@@ -1,0 +1,70 @@
+<div class="bg-light">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-3">Icono</a>
+            <form class="d-flex">
+                <button class="btn btn-outline-light" type="submit">Mi Cuenta</button>
+            </form>
+        </div>
+    </nav>
+    <div class="row w-100" style="height: 650px">
+        <div class="col-2 p-3 bg-secondary bg-opacity-75">
+            <h2 class="m-2 text-dark">Menu</h2>
+            <div class="d-flex flex-column mb-3">
+                <a href="/" class="p-2 btn link-light">Productos</a>
+                <a href="#" class="p-2 btn link-light">Opcion 2</a>
+                <a href="#" class="p-2 btn link-light">Opcion 3</a>
+                <a href="#" class="p-2 btn link-light">Opcion 4</a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="m-5 mt-5">
+                <h2>Lista de Productos</h2>
+                <hr>
+                <table class="table table-sm table-dark table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Origen</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let produt of listProducts; let i = index">
+                            <td scope="row">{{produt.id}}</td>
+                            <td>{{produt.nombre}}</td>
+                            <td>$ {{produt.precio}}</td>
+                            <td>{{produt.origen}}</td>
+                            <td>{{produt.stock}}</td>
+                            <td>
+                                <a href='#' class="btn btn-sm btn-secondary mx-1">Ver</a>
+                                <a href='#' class="btn btn-sm btn-danger">Borrar</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center p-3 border-top bg-dark">
+        <p class="col-md-4 mb-0 text-muted">© 2021 Company, Inc</p>
+
+        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-light text-decoration-none">
+            <h3>ICONO</h3>
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+    </footer>
+</div>
+
+
+<router-outlet></router-outlet>
